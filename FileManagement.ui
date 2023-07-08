@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1333</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>2153678 林怀加 FileManagement</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>当前路径</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="CurDir">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>10</y>
+      <width>1161</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTreeView" name="treeView">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>120</y>
+      <width>321</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <attribute name="headerVisible">
+     <bool>false</bool>
+    </attribute>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>80</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>文件内容</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>550</y>
+      <width>601</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>文件信息</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser_3">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>580</y>
+      <width>1061</width>
+      <height>91</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SaveFile">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>540</y>
+      <width>241</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存修改</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>80</y>
+      <width>261</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>目录结构</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>75</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>当前目录下文件</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="filecontent">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>120</y>
+      <width>411</width>
+      <height>411</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QListView" name="CurDirAllNode">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>120</y>
+      <width>451</width>
+      <height>411</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1333</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="FormatFileSystem"/>
+    <addaction name="Save_System_Status"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>新建</string>
+    </property>
+    <addaction name="CreateDir"/>
+    <addaction name="CreateFile"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>删除</string>
+    </property>
+    <addaction name="DeleteDir"/>
+    <addaction name="DeleteFile"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>重命名</string>
+    </property>
+    <addaction name="RenameDir"/>
+    <addaction name="RenameFile"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionHelp"/>
+    <addaction name="actionaddition"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+   <addaction name="menu_5"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="FormatFileSystem">
+   <property name="text">
+    <string>格式化</string>
+   </property>
+  </action>
+  <action name="Save_System_Status">
+   <property name="text">
+    <string>保存文件系统状态</string>
+   </property>
+  </action>
+  <action name="CreateDir">
+   <property name="text">
+    <string>新建文件夹</string>
+   </property>
+  </action>
+  <action name="CreateFile">
+   <property name="text">
+    <string>新建文件</string>
+   </property>
+  </action>
+  <action name="DeleteDir">
+   <property name="text">
+    <string>删除文件夹</string>
+   </property>
+  </action>
+  <action name="DeleteFile">
+   <property name="text">
+    <string>删除文件</string>
+   </property>
+  </action>
+  <action name="RenameDir">
+   <property name="text">
+    <string>重命名文件夹</string>
+   </property>
+  </action>
+  <action name="RenameFile">
+   <property name="text">
+    <string>重命名文件</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>帮助</string>
+   </property>
+  </action>
+  <action name="actionaddition">
+   <property name="text">
+    <string>彩蛋</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
